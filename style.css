@@ -358,3 +358,11 @@
     left: 0;
   }
 }
+.device-frame {
+    width: 100%;
+    max-width: 420px;
+    background: var(--white);
+    border: 12px solid var(--navy-soft);
+    border-radius: 28px;
+    padding: 16px;
+}
