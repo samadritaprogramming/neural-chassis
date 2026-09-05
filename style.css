@@ -3,541 +3,358 @@
    ========================================================= */
 
 .hero-visual {
-    position: relative;
-    width: 100%;
-    min-height: 500px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 500px;
 }
 
 /* Soft blue atmosphere behind the computer */
-
 .pc-scene {
-    position: relative;
-
-    width: 480px;
-    height: 430px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transform: rotate(-2deg);
-
-    animation: pcFloat 6s ease-in-out infinite;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 480px;
+  height: 430px;
+  transform: rotate(-2deg);
+  animation: pcFloat 6s ease-in-out infinite;
 }
 
 @keyframes pcFloat {
-    0%,
-    100% {
-        transform:
-            translateY(0)
-            rotate(-2deg);
-    }
-
-    50% {
-        transform:
-            translateY(-12px)
-            rotate(-1deg);
-    }
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-1deg);
+  }
 }
-
 
 /* =========================================================
    GLOW
    ========================================================= */
 
 .pc-glow {
-    position: absolute;
-
-    width: 330px;
-    height: 330px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(56, 189, 248, 0.28) 0%,
-            rgba(56, 189, 248, 0.12) 38%,
-            transparent 72%
-        );
-
-    filter: blur(18px);
-
-    animation:
-        pcGlow 5s ease-in-out infinite;
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.28) 0%,
+    rgba(56, 189, 248, 0.12) 38%,
+    transparent 72%
+  );
+  filter: blur(18px);
+  animation: pcGlow 5s ease-in-out infinite;
 }
 
 @keyframes pcGlow {
-    0%,
-    100% {
-        transform: scale(0.95);
-        opacity: 0.7;
-    }
-
-    50% {
-        transform: scale(1.08);
-        opacity: 1;
-    }
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
 }
-
 
 /* =========================================================
    COMPUTER CASE
    ========================================================= */
 
 .pc-case {
-    position: relative;
-    z-index: 3;
-
-    width: 310px;
-    height: 365px;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #f8fcff,
-            #dcecf7
-        );
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.95);
-
-    box-shadow:
-        20px 30px 55px
-            rgba(15, 23, 42, 0.16),
-
-        0 0 0 1px
-            rgba(56, 189, 248, 0.1),
-
-        inset 0 1px 0
-            rgba(255, 255, 255, 0.9);
-
-    transform:
-        perspective(900px)
-        rotateY(-8deg);
-
-    overflow: hidden;
+  position: relative;
+  z-index: 3;
+  width: 310px;
+  height: 365px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8fcff, #dcecf7);
+  box-shadow:
+    20px 30px 55px rgba(15, 23, 42, 0.16),
+    0 0 0 1px rgba(56, 189, 248, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform: perspective(900px) rotateY(-8deg);
 }
 
-
-/* glass side panel */
-
+/* Glass Side Panel */
 .pc-panel {
-    position: absolute;
-
-    inset: 15px;
-
-    border-radius: 13px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.72),
-            rgba(226, 244, 253, 0.55)
-        );
-
-    border:
-        1px solid
-        rgba(56, 189, 248, 0.22);
-
-    box-shadow:
-        inset 0 0 25px
-            rgba(56, 189, 248, 0.05);
-
-    overflow: hidden;
+  position: absolute;
+  inset: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.72),
+    rgba(226, 244, 253, 0.55)
+  );
+  box-shadow: inset 0 0 25px rgba(56, 189, 248, 0.05);
 }
-
 
 /* =========================================================
    INTERNAL COMPONENTS
    ========================================================= */
 
 .pc-component {
-    position: absolute;
-
-    background:
-        rgba(255, 255, 255, 0.85);
-
-    border:
-        1px solid
-        rgba(8, 127, 184, 0.18);
-
-    box-shadow:
-        0 8px 20px
-            rgba(15, 23, 42, 0.08);
+  position: absolute;
+  border: 1px solid rgba(8, 127, 184, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
-
 
 /* CPU */
-
 .component-cpu {
-    width: 82px;
-    height: 82px;
-
-    top: 45px;
-    left: 38px;
-
-    border-radius: 12px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(56, 189, 248, 0.3) 0 18%,
-            transparent 19%
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent 0 9px,
-            rgba(56, 189, 248, 0.14) 10px 11px
-        ),
-        #f8fcff;
-
-    animation:
-        componentPulse 4s ease-in-out infinite;
+  position: absolute;
+  top: 45px;
+  left: 38px;
+  width: 82px;
+  height: 82px;
+  border: 1px solid rgba(8, 127, 184, 0.18);
+  border-radius: 12px;
+  background:
+    radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.3) 0 18%,
+      transparent 19%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 9px,
+      rgba(56, 189, 248, 0.14) 10px 11px
+    ),
+    #f8fcff;
+  animation: componentPulse 4s ease-in-out infinite;
 }
-
 
 /* GPU */
-
 .component-gpu {
-    width: 150px;
-    height: 70px;
-
-    left: 38px;
-    bottom: 65px;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f8fcff,
-            #e5f5fc
-        );
+  position: absolute;
+  bottom: 65px;
+  left: 38px;
+  width: 150px;
+  height: 70px;
+  border: 1px solid rgba(8, 127, 184, 0.18);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8fcff, #e5f5fc);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
-
-/* GPU fan */
-
+/* GPU Fans */
 .component-gpu::before,
 .component-gpu::after {
-    content: "";
-
-    position: absolute;
-
-    top: 50%;
-
-    width: 43px;
-    height: 43px;
-
-    transform:
-        translateY(-50%);
-
-    border-radius: 50%;
-
-    border:
-        5px solid
-        var(--baby-blue-mid);
-
-    background:
-        radial-gradient(
-            circle,
-            var(--baby-blue-accent) 0 12%,
-            transparent 13%
-        );
-
-    box-shadow:
-        inset 0 0 0 5px
-            rgba(255, 255, 255, 0.7);
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 43px;
+  height: 43px;
+  border: 5px solid var(--baby-blue-mid);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--baby-blue-accent) 0 12%,
+    transparent 13%
+  );
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.7);
+  transform: translateY(-50%);
 }
 
 .component-gpu::before {
-    left: 15px;
+  left: 15px;
 }
 
 .component-gpu::after {
-    right: 15px;
+  right: 15px;
 }
-
 
 /* RAM */
-
 .component-ram {
-    width: 20px;
-    height: 145px;
-
-    right: 45px;
-    top: 48px;
-
-    border-radius: 5px;
-
-    background:
-        repeating-linear-gradient(
-            to bottom,
-            var(--baby-blue-mid) 0 10px,
-            #f8fcff 10px 18px
-        );
-
-    box-shadow:
-        0 0 18px
-            rgba(56, 189, 248, 0.12);
+  position: absolute;
+  top: 48px;
+  right: 45px;
+  width: 20px;
+  height: 145px;
+  border: 1px solid rgba(8, 127, 184, 0.18);
+  border-radius: 5px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--baby-blue-mid) 0 10px,
+    #f8fcff 10px 18px
+  );
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.12);
 }
 
-
 /* =========================================================
-   MOTHERBOARD LINES
+   MOTHERBOARD LINES & CHIPS
    ========================================================= */
 
 .pc-panel::before {
-    content: "";
-
-    position: absolute;
-
-    width: 170px;
-    height: 120px;
-
-    right: 25px;
-    bottom: 30px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 48%,
-            rgba(56, 189, 248, 0.16) 49%,
-            transparent 51%
-        ),
-        linear-gradient(
-            transparent 48%,
-            rgba(56, 189, 248, 0.16) 49%,
-            transparent 51%
-        );
-
-    opacity: 0.8;
+  content: "";
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  width: 170px;
+  height: 120px;
+  opacity: 0.8;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 48%,
+      rgba(56, 189, 248, 0.16) 49%,
+      transparent 51%
+    ),
+    linear-gradient(
+      transparent 48%,
+      rgba(56, 189, 248, 0.16) 49%,
+      transparent 51%
+    );
 }
-
-
-/* little motherboard chips */
 
 .pc-panel::after {
-    content: "";
-
-    position: absolute;
-
-    width: 12px;
-    height: 12px;
-
-    right: 70px;
-    bottom: 72px;
-
-    border-radius: 3px;
-
-    background:
-        var(--baby-blue-accent);
-
-    box-shadow:
-        30px -35px 0
-            var(--baby-blue-mid),
-
-        -25px 20px 0
-            var(--baby-blue-mid),
-
-        55px 25px 0
-            rgba(56, 189, 248, 0.35);
+  content: "";
+  position: absolute;
+  right: 70px;
+  bottom: 72px;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--baby-blue-accent);
+  box-shadow:
+    30px -35px 0 var(--baby-blue-mid),
+    -25px 20px 0 var(--baby-blue-mid),
+    55px 25px 0 rgba(56, 189, 248, 0.35);
 }
-
 
 /* =========================================================
    PC BASE / SHADOW
    ========================================================= */
 
 .pc-base {
-    position: absolute;
-
-    z-index: 2;
-
-    width: 365px;
-    height: 30px;
-
-    bottom: 28px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(15, 23, 42, 0.12);
-
-    filter: blur(8px);
+  position: absolute;
+  bottom: 28px;
+  z-index: 2;
+  width: 365px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.12);
+  filter: blur(8px);
 }
 
-
 /* =========================================================
-   LITTLE FLOATING DATA ELEMENTS
+   FLOATING DATA ELEMENTS & ANIMATIONS
    ========================================================= */
 
 .pc-scene::before {
-    content: "01";
-
-    position: absolute;
-
-    top: 38px;
-    right: 18px;
-
-    z-index: 5;
-
-    padding: 8px 12px;
-
-    border-radius: 8px;
-
-    background:
-        rgba(255, 255, 255, 0.9);
-
-    border:
-        1px solid
-        rgba(56, 189, 248, 0.18);
-
-    color:
-        var(--baby-blue-deep);
-
-    font-family:
-        var(--font-heading);
-
-    font-size: 0.72rem;
-
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 25px
-            rgba(15, 23, 42, 0.08);
-
-    animation:
-        dataFloat 4s ease-in-out infinite;
+  content: "01";
+  position: absolute;
+  top: 38px;
+  right: 18px;
+  z-index: 5;
+  padding: 8px 12px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--baby-blue-deep);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  animation: dataFloat 4s ease-in-out infinite;
 }
 
 .pc-scene::after {
-    content: "ACCESS";
-
-    position: absolute;
-
-    left: 8px;
-    bottom: 82px;
-
-    z-index: 5;
-
-    padding: 8px 12px;
-
-    border-radius: 8px;
-
-    background:
-        rgba(255, 255, 255, 0.9);
-
-    border:
-        1px solid
-        rgba(56, 189, 248, 0.18);
-
-    color:
-        var(--navy-soft);
-
-    font-size: 0.68rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-
-    box-shadow:
-        0 10px 25px
-            rgba(15, 23, 42, 0.08);
-
-    animation:
-        dataFloat 4s ease-in-out 1s infinite;
+  content: "ACCESS";
+  position: absolute;
+  bottom: 82px;
+  left: 8px;
+  z-index: 5;
+  padding: 8px 12px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy-soft);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  animation: dataFloat 4s ease-in-out 1s infinite;
 }
 
 @keyframes dataFloat {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-7px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
 }
-
 
 @keyframes componentPulse {
-    0%,
-    100% {
-        box-shadow:
-            0 8px 20px
-                rgba(15, 23, 42, 0.08);
-    }
-
-    50% {
-        box-shadow:
-            0 8px 25px
-                rgba(56, 189, 248, 0.15);
-    }
+  0%,
+  100% {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+  }
 }
 
-
 /* =========================================================
-   MOBILE COMPUTER
+   MOBILE RESPONSIVENESS
    ========================================================= */
 
 @media (max-width: 600px) {
+  .hero-visual {
+    min-height: 390px;
+  }
 
-    .hero-visual {
-        min-height: 390px;
-    }
+  .pc-scene {
+    width: 360px;
+    height: 350px;
+  }
 
-    .pc-scene {
-        width: 360px;
-        height: 350px;
-    }
+  .pc-case {
+    width: 250px;
+    height: 300px;
+  }
 
-    .pc-case {
-        width: 250px;
-        height: 300px;
-    }
+  .component-cpu {
+    top: 35px;
+    left: 30px;
+    width: 65px;
+    height: 65px;
+  }
 
-    .component-cpu {
-        width: 65px;
-        height: 65px;
+  .component-gpu {
+    bottom: 50px;
+    left: 30px;
+    width: 120px;
+    height: 58px;
+  }
 
-        top: 35px;
-        left: 30px;
-    }
+  .component-ram {
+    top: 38px;
+    right: 35px;
+    height: 115px;
+  }
 
-    .component-gpu {
-        width: 120px;
-        height: 58px;
+  .pc-base {
+    width: 290px;
+  }
 
-        left: 30px;
-        bottom: 50px;
-    }
+  .pc-scene::before {
+    right: 0;
+  }
 
-    .component-ram {
-        height: 115px;
-
-        right: 35px;
-        top: 38px;
-    }
-
-    .pc-base {
-        width: 290px;
-    }
-
-    .pc-scene::before {
-        right: 0;
-    }
-
-    .pc-scene::after {
-        left: 0;
-    }
+  .pc-scene::after {
+    left: 0;
+  }
 }
